@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Scrolling Ticker</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    /* Ticker container with space from both sides */
+    .ticker-container {
+      width: calc(100% - 400px); /* Full width minus 200px padding on each side */
+      margin: 0 auto; /* Center the ticker */
+      overflow: hidden; /* Hide content that overflows the container */
+      background-color: #4facfe;
+      color: white;
+      padding: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    /* Content inside the ticker that will scroll horizontally */
+    .ticker-content {
+      display: inline-block;
+      animation: ticker 20s linear infinite; /* Horizontal scroll animation */
+    }
+
+    /* Style for each company name */
+    .ticker-content span {
+      margin-right: 50px; /* Space between company names */
+    }
+
+    /* Horizontal scrolling animation */
+    @keyframes ticker {
+      0% {
+        transform: translateX(100%); /* Start from right outside the container */
+      }
+      100% {
+        transform: translateX(-100%); /* Move to the left outside the container */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ticker Container -->
+  <div class="ticker-container">
+    <div class="ticker-content">
+      <span>Company 1</span>
+      <span>Company 2</span>
+      <span>Company 3</span>
+      <span>Company 4</span>
+      <span>Company 5</span>
+      <span>Company 6</span>
+      <span>Company 7</span>
+      <span>Company 8</span>
+    </div>
+  </div>
+
+  <script>
+    // Optional JavaScript: Dynamically change ticker content or speed if needed
+  </script>
+
+</body>
+</html>
+

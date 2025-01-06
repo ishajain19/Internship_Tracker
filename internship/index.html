@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            position: static;
+            background:#333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        #welcome {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #welcome h1 {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: static;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Horizontal Ticker Styles */
+        .horizontal-ticker-container {
+            width: calc(100% - 400px); /* Full width minus 200px padding on each side */
+            margin: 0 auto; /* Center the ticker */
+            overflow: hidden; /* Hide content that overflows the container */
+            background-color:#333;
+            color: white;
+            padding: 10px 0;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        /* Horizontal scrolling content */
+        .horizontal-ticker-content {
+            display: inline-block;
+            animation: horizontalTicker 20s linear infinite; /* Horizontal scroll animation */
+        }
+
+        .horizontal-ticker-content span {
+            margin-right: 50px; /* Space between company names */
+        }
+
+        /* Horizontal scrolling animation */
+        @keyframes horizontalTicker {
+            0% {
+                transform: translateX(100%); /* Start from right outside the container */
+            }
+            100% {
+                transform: translateX(-100%); /* Move to the left outside the container */
+            }
+        }
+
+    .wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-gap: 10px;
+  align-items: center;
+}
+.box{
+  overflow: hidden;
+  border-radius: 20px;
+  
+}
+.wrapper img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: 0.5s all  ease-in-out;
+}
+.wrapper img:hover{
+  transform: scale(.9);
+
+}
+
+.content
+{
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  z-index: 0;
+}
+
+.content p
+{
+  
+  font-size: 1.1em;
+  color:white;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="update.html">Live</a></li>
+                <li><a href="internship.html">Internships</a></li>
+                <li><a href="Help.html">Help</a></li>
+                <li><a href="cources.html">Courses</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+ <main>
+
+        <!-- Welcome Section -->
+        <section id="welcome">
+            <h1><center>"Gear Up for Success</center></h1>
+            <h1><center> Transform Your Education into Experience!"</center></h1>
+        </section>
+        <center><img src="img2.png"></center>
+        <div class="content">
+            <!-- <h2>Love Food</h2>
+            <h3>Hate Wasting</h3> -->
+            <p style="font-size: 35px;">
+                <center>“The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.</center>
+            </p>
+           
+        </div>
+        <center><h1>About Us</h1></center>
+        <p style="font-size: 28px; text-align: center;">"Shaping Future Careers Together"</p>
+        <p style="font-size: 20px;">At NextStep, we are committed to shaping the future of young talent by providing valuable real-world experiences.<br><br> Our internship program is tailored to help students and recent graduates explore various industries and gain hands-on skills that will set them apart in their careers. We offer an environment where learning and growth are prioritized, allowing you to work on challenging projects alongside seasoned professionals.
+
+            Throughout the internship, you'll have the opportunity to develop both technical and soft skills, gaining insights into the day-to-day operations of the industry.<br><br> Whether you’re interested in technology, marketing, design, or business, our program is designed to cater to a wide range of career interests. We believe in fostering a collaborative culture where interns can contribute meaningfully while also receiving mentorship and guidance.
+            
+           <br><br> By joining NextStep, you’ll not only build your resume but also establish valuable professional connections. The experiences and knowledge you gain will help you grow personally and professionally, paving the way for future success.<br><br>This internship offers a unique platform for aspiring professionals to learn, develop, and take that crucial next step toward their career goals.
+            
+            At NextStep, it’s more than just an internship; it’s a pathway to success. Join us, and let’s create the future together!</b></p>
+    </main>
+    <div class="wrapper">
+        <div class="box"><img src="img3.jpg" alt="mentor"></div>
+        <div class="box"><img src="img4.jpg" alt="componey"></div>
+        <div class="box"><img src="img5.jpg" alt="student"></div>
+      </div>
+      <br>
+
+    <footer>
+        <section class="horizontal-ticker-container">
+            <div class="horizontal-ticker-content">
+                <span>Google</span>
+                <span>Amazon</span>
+                <span>FlipCart</span>
+                <span>Uber</span>
+                <span>TCS</span>
+                <span>Wipro</span>
+                <span>goldman</span>
+                <span>zomato</span>
+                <span>Google</span>
+                <span>Amazon</span>
+                <span>FlipCart</span>
+                <span>Uber</span>
+                <span>TCS</span>
+                <span>Wipro</span>
+                <span>goldman</span>
+            </div>
+        </section>
+        <br>
+            <div class="footer-left col-md-4 col-sm-6">
+                <p class="about"><b><center>"Empower your future with hands-on experience! Join our internship program to gain practical skills, build your professional network, and kick-start your career in a dynamic and supportive environment."</center></b></p>
+           </p>
+                  <p><a href="#"> NextStep_internship@gmail.com</a></p>
+                </div>
+              </div>
+              <div class="footer-right col-md-4 col-sm-6">
+                <h2><span>NextStep</span></h2>
+                <!-- <h2>Food donate</h2> -->
+                <p class="menu"> 
+                  <a href="index.html">Home</a> |
+                  <a href="update.html">Live</a> |
+                <a href="internship.html">Internships</a> |
+                <a href="Help.html">Help</a> |
+                <a href="cources.html">Courses</a>
+                </p>
+                <p class="name">NextStep&copy2025</p>
+              </div>
+        </footer>
+
+   <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Welcome to Internship Tracker!");
+        });
+    </script>
+</body>
+</html>
+
