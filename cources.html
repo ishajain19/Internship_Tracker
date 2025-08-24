@@ -3,189 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Videos</title>
+  <title>Tech Career Courses in Hindi</title>
   <style>
-    /* CSS styles */
+    /* ----- GENERAL STYLES ----- */
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f9;
+      font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    h1 {
-      text-align: center;
+      background: #f0f2f7;
       color: #333;
     }
 
-    .course-container {
-      width: 80%;
+    h1, h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #0d3b66;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #144552;
+      margin-top: 40px;
+      border-bottom: 2px solid #0084ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .section {
+      padding: 40px 20px;
       max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ----- COURSE CARDS ----- */
+    .course-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 25px;
       margin-top: 30px;
     }
 
     .course-card {
       background: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
       width: 300px;
-      margin: 20px;
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.3s ease;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .course-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
     }
 
     iframe {
       width: 100%;
-      height: 200px;
-      border-radius: 8px;
+      height: 180px;
+      border: none;
+    }
+
+    .course-info {
+      padding: 20px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .course-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 15px;
-      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #0d3b66;
     }
 
     .course-description {
-      color: #555;
       font-size: 14px;
-      margin: 10px 0;
+      color: #555;
+      margin-bottom: 15px;
+      min-height: 50px;
     }
 
     .course-card a {
       text-decoration: none;
+      background: #0084ff;
       color: #fff;
-      background: #333;
-      padding: 10px;
-      border-radius: 4px;
-      margin-top: 10px;
-      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
 
     .course-card a:hover {
-      background: #0084ff;
+      background: #005bb5;
     }
+
+    /* ----- MORE BUTTON ----- */
+    .more-btn {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .more-btn a {
+      text-decoration: none;
+      background: #28a745;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .more-btn a:hover {
+      background: #1e7e34;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 1024px) {
+      .course-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .course-card {
+        width: 100%;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+    }
+
   </style>
 </head>
 <body>
+
   <h1>Courses</h1>
 
-  <div class="course-container">
-    <!-- Java Course -->
-    <div class="course-card">
-      <iframe src="https://www.youtube.com/embed/GoXwIVyNvX0" title="Java Tutorial for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="course-title">Java for Beginners</div>
-      <div class="course-description">Learn Java programming with this beginner-friendly course.</div>
-      <a href="https://www.youtube.com/watch?v=GoXwIVyNvX0" target="_blank">Watch Full Course</a>
+  <!-- MERN Stack Courses Section -->
+  <div class="section">
+    <div class="course-container">
+      <div class="course-card">
+        <iframe src="https://www.youtube.com/embed/7CqJlxBYj-M" title="Complete MERN Stack Course in Hindi" allowfullscreen></iframe>
+        <div class="course-info">
+          <div class="course-title">Complete MERN Stack Course in Hindi</div>
+          <div class="course-description">A comprehensive playlist covering Node.js, Express.js, React, and MongoDB.</div>
+          <a href="https://www.youtube.com/watch?v=7CqJlxBYj-M" target="_blank">Watch Full Course</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <iframe src="https://www.youtube.com/embed/xCCSypTlhm0" title="Learn MERN Stack in Just 5 Hours" allowfullscreen></iframe>
+        <div class="course-info">
+          <div class="course-title">Learn MERN Stack in Just 5 Hours</div>
+          <div class="course-description">A crash course for absolute beginners in MERN stack development.</div>
+          <a href="https://www.youtube.com/watch?v=xCCSypTlhm0" target="_blank">Watch Full Course</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <iframe src="https://www.youtube.com/embed/0pThnRneDjw" title="MERN Stack Tutorial in Hindi" allowfullscreen></iframe>
+        <div class="course-info">
+          <div class="course-title">MERN Stack Tutorial in Hindi</div>
+          <div class="course-description">Step-by-step guide to building full-stack applications with MERN stack.</div>
+          <a href="https://www.youtube.com/watch?v=0pThnRneDjw" target="_blank">Watch Full Course</a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Python Course -->
-    <div class="course-card">
-      <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Python for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="course-title">Python for Beginners</div>
-      <div class="course-description">Start learning Python programming from scratch in this free course.</div>
-      <a href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank">Watch Full Course</a>
+  <!-- Java Courses Section -->
+  <div class="section">
+    <div class="course-container">
+      <div class="course-card">
+        <iframe src="https://www.youtube.com/embed/GoXwIVyNvX0" title="Java Tutorial For Beginners in Hindi" allowfullscreen></iframe>
+        <div class="course-info">
+          <div class="course-title">Java Tutorial For Beginners in Hindi</div>
+          <div class="course-description">A complete guide to Java programming from scratch.</div>
+          <a href="https://www.youtube.com/watch?v=GoXwIVyNvX0" target="_blank">Watch Full Course</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <iframe src="https://www.youtube.com/embed/HXV3zeQKqGY" title="Java Tutorials For Beginners in Hindi" allowfullscreen></iframe>
+        <div class="course-info">
+          <div class="course-title">Java Tutorials For Beginners in Hindi</div>
+          <div class="course-description">A series covering basic to advanced Java concepts.</div>
+          <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY" target="_blank">Watch Full Course</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <iframe src="https://www.youtube.com/embed/vLnPwxZdW4Y" title="Free Java Tutorial Basic to Advance [Hindi]" allowfullscreen></iframe>
+        <div class="course-info">
+          <div class="course-title">Free Java Tutorial Basic to Advance [Hindi]</div>
+          <div class="course-description">Comprehensive coverage of Java fundamentals for beginners.</div>
+          <a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" target="_blank">Watch Full Course</a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- SQL Course -->
-    <div class="course-card">
-      <iframe src="https://www.youtube.com/embed/HXV3zeQKqGY" title="SQL Tutorial for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="course-title">SQL for Beginners</div>
-      <div class="course-description">Learn SQL, one of the most popular databases languages, with this beginner course.</div>
-      <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY" target="_blank">Watch Full Course</a>
-    </div>
+  <!-- More Videos Button -->
+  <div class="more-btn">
+    <a href="https://www.youtube.com/@CodingVideosForStudents" target="_blank">More Videos</a>
+  </div>
 
-
-    <!-- SQL Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/HXV3zeQKqGY" title="SQL Tutorial for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">SQL for Beginners</div>
-  <div class="course-description">Learn SQL, one of the most popular databases languages, with this beginner course.</div>
-  <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- Python Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" title="Python for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">Python for Beginners</div>
-  <div class="course-description">Master Python programming with this comprehensive beginner course, ideal for placements.</div>
-  <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- Data Structures and Algorithms Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/BM7fzv_dVqE" title="Data Structures and Algorithms" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">Data Structures and Algorithms</div>
-  <div class="course-description">Learn the essential data structures and algorithms that form the backbone of coding interviews and placements.</div>
-  <a href="https://www.youtube.com/watch?v=BM7fzv_dVqE" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- JavaScript Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" title="JavaScript for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">JavaScript for Beginners</div>
-  <div class="course-description">Learn the basics of JavaScript, a key programming language for web development and programming placements.</div>
-  <a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- C++ Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/vLnPwxZdW4Y" title="C++ Programming for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">C++ Programming for Beginners</div>
-  <div class="course-description">Get started with C++ programming with this detailed course designed to cover all the basics.</div>
-  <a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- Java Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/GoXwIVyNvX0" title="Java Programming for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">Java for Beginners</div>
-  <div class="course-description">Learn Java, one of the most popular languages used in placements and interviews.</div>
-  <a href="https://www.youtube.com/watch?v=GoXwIVyNvX0" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- Git and GitHub Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/nhNpuvs8UGw" title="Git and GitHub for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">Git and GitHub for Beginners</div>
-  <div class="course-description">Learn version control with Git and GitHub, essential tools for modern developers.</div>
-  <a href="https://www.youtube.com/watch?v=nhNpuvs8UGw" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- Operating System Concepts Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/0u1EX2pcxxk" title="Operating System Concepts" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">Operating System Concepts</div>
-  <div class="course-description">Learn fundamental OS concepts that are often discussed in coding interviews and placements.</div>
-  <a href="https://www.youtube.com/watch?v=0u1EX2pcxxk" target="_blank">Watch Full Course</a>
-</div>
-
-<!-- Algorithms Course -->
-<div class="course-card">
-  <iframe src="https://www.youtube.com/embed/8hly31xKli0" title="Algorithms for Beginners" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="course-title">Algorithms for Beginners</div>
-  <div class="course-description">A detailed course on algorithms, an essential part of programming placements and interviews.</div>
-  <a href="https://www.youtube.com/watch?v=8hly31xKli0" target="_blank">Watch Full Course</a>
-</div>
-
-
-  <script>
-    // Optional JS functionality (e.g., for interactivity)
-    // No specific functionality needed for this design, but can be expanded
-  </script>
 </body>
 </html>
