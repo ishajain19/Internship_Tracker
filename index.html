@@ -6,61 +6,60 @@
   <title>NextStep | Internship Tracker</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Base Styles */
     body {
-      font-family: "Poppins", sans-serif;
+      font-family: "Inter", sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9fafc;
-      color: #333;
-      line-height: 1.6;
+      color: #2d2d2d;
+      line-height: 1.7;
     }
 
     /* Header */
     header {
-      background: #1a237e;
+      background: linear-gradient(90deg, #1a237e, #3949ab);
       color: #fff;
-      padding: 15px 20px;
+      padding: 18px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.25);
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
 
-    /* Desktop Nav */
     nav ul {
       list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
       display: flex;
-      gap: 20px;
+      gap: 24px;
     }
 
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
+      font-size: 0.95rem;
+      transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #90caf9;
+      color: #bbdefb;
     }
 
-    /* Hamburger */
+    /* Mobile Menu */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -72,21 +71,9 @@
       width: 25px;
       height: 3px;
       background: white;
-      border-radius: 3px;
-      transition: 0.4s;
+      border-radius: 2px;
     }
 
-    .hamburger.active div:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .hamburger.active div:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active div:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    /* Mobile Nav */
     .mobile-nav {
       display: none;
       flex-direction: column;
@@ -100,129 +87,101 @@
       color: #fff;
       text-decoration: none;
       text-align: center;
-      transition: background 0.3s;
     }
+    .mobile-nav a:hover { background: #303f9f; }
 
-    .mobile-nav a:hover {
-      background: #303f9f;
-    }
-
-    /* Welcome Section */
+    /* Hero Section */
     #welcome {
-      padding: 60px 20px 20px;
       text-align: center;
+      padding: 70px 20px 50px;
+      background: #f1f3f8;
     }
-
     #welcome h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
+      font-size: 2.4rem;
       color: #1a237e;
+      margin-bottom: 10px;
+    }
+    #welcome h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #555;
+      margin-top: 5px;
     }
 
-    #welcome h1:last-child {
-      font-size: 1.8rem;
-      color: #3949ab;
-    }
-
-    /* Quote Section */
+    /* Quote */
     .content {
       padding: 40px 20px;
-      background: linear-gradient(135deg, #1a237e, #3949ab);
+      background: linear-gradient(120deg, #1a237e, #5c6bc0);
       color: #fff;
       text-align: center;
-    }
-
-    .content p {
-      font-size: 1.2em;
-      max-width: 800px;
-      margin: auto;
       font-style: italic;
+      font-size: 1.2rem;
     }
 
-    /* About Section */
+    /* About */
     h1.section-title {
       text-align: center;
+      margin: 50px 0 20px;
       color: #1a237e;
-      font-weight: 600;
-      margin-top: 40px;
+      font-size: 2rem;
     }
-
     .about-text {
-      font-size: 18px;
-      line-height: 1.8;
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 20px;
-      text-align: justify;
-      color: #444;
-    }
-
-    /* Image Grid */
-    .wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      padding: 50px 20px;
-      max-width: 1100px;
+      max-width: 950px;
       margin: auto;
+      padding: 0 20px;
+      font-size: 1.05rem;
+      color: #444;
+      text-align: justify;
     }
 
-    .box {
-      perspective: 1000px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
-
-    .box img {
-      width: 100%;
-      max-width: 280px;
-      border-radius: 15px;
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
-      cursor: pointer;
+    .feature-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
     }
-
-    .box img:hover {
-      transform: rotateY(10deg) rotateX(8deg) scale(1.05);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    .feature-card:hover { transform: translateY(-6px); }
+    .feature-card h3 {
+      color: #1a237e;
+      margin-bottom: 12px;
     }
-
-    /* Mobile tweak */
-    @media (max-width: 480px) {
-      .wrapper {
-        grid-template-columns: 1fr 1fr;
-      }
-      .box img {
-        max-width: 150px;
-      }
+    .feature-card p {
+      color: #555;
+      font-size: 0.95rem;
     }
 
     /* Ticker */
     .horizontal-ticker-container {
       width: 100%;
       overflow: hidden;
-      background-color: #1a237e;
+      background: #1a237e;
       color: white;
       padding: 12px 0;
-      font-size: 18px;
+      font-size: 1rem;
       font-weight: 600;
       white-space: nowrap;
-      box-shadow: inset 0 -2px 6px rgba(0,0,0,0.2);
     }
-
     .horizontal-ticker-content {
       display: inline-block;
-      animation: horizontalTicker 20s linear infinite;
+      animation: ticker 18s linear infinite;
     }
-
     .horizontal-ticker-content span {
-      margin-right: 60px;
-      letter-spacing: 1px;
+      margin-right: 70px;
     }
-
-    @keyframes horizontalTicker {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+    @keyframes ticker {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
     }
 
     /* Footer */
@@ -231,41 +190,22 @@
       padding: 40px 20px;
       background: #1a237e;
       color: #fff;
-      margin-top: 40px;
+      margin-top: 50px;
     }
-
-    footer p {
-      margin: 8px 0;
-    }
-
+    footer p { margin: 8px 0; }
     footer a {
       color: #90caf9;
       text-decoration: none;
-      transition: color 0.3s;
     }
-
-    footer a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
+    footer a:hover { color: #fff; text-decoration: underline; }
 
     /* Responsive */
     @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-      .hamburger {
-        display: flex;
-      }
-      .mobile-nav.active {
-        display: flex;
-      }
-      #welcome h1 {
-        font-size: 1.6rem;
-      }
-      .about-text {
-        font-size: 16px;
-      }
+      nav ul { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.active { display: flex; }
+      #welcome h1 { font-size: 1.8rem; }
+      #welcome h2 { font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -279,29 +219,20 @@
       </ul>
     </nav>
     <div class="hamburger" onclick="toggleMenu(this)">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div></div><div></div><div></div>
     </div>
   </header>
 
-  <!-- Mobile Nav -->
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
-    <!-- <a href="update.html">Live</a>
-    <a href="internship.html">Internships</a>
-    <a href="Help.html">Help</a>
-    <a href="cources.html">Courses</a> -->
     <a href="login.html">Login</a>
   </div>
 
   <main>
     <section id="welcome">
-      <h1>"Gear Up for Success"</h1>
-      <h1>Transform Your Education into Experience!</h1>
+      <h1>🚀 Gear Up for Success</h1>
+      <h2>Transform Your Education into Experience</h2>
     </section>
-
-    <center><img src="img2.png" alt="Welcome Image" style="max-width: 80%; height: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);"></center>
 
     <div class="content">
       <p>“The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.”</p>
@@ -309,14 +240,27 @@
 
     <h1 class="section-title">About Us</h1>
     <p class="about-text">
-      At NextStep, we are committed to shaping the future of young talent by providing valuable real-world experiences. Our internship program is tailored to help students and recent graduates explore various industries and gain hands-on skills that will set them apart in their careers...
+      At <b>NextStep</b>, we are committed to shaping the future of young talent by providing valuable real-world experiences. 
+      Our internship program is tailored to help students and graduates explore industries and gain hands-on skills that will set them apart in their careers. 
+      We believe in a future where every student has the confidence, experience, and support to take the <i>next step</i> in their professional journey.
     </p>
-  </main>
 
-  <div class="wrapper">
-    <div class="box"><img src="img4.jpg" alt="company"></div>
-    <div class="box"><img src="img5.jpg" alt="student"></div>
-  </div>
+    <h1 class="section-title">Our Features</h1>
+    <div class="features">
+      <div class="feature-card">
+        <h3>📊 Internship Tracker</h3>
+        <p>Log tasks, monitor progress, and track your deadlines with ease.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📝 Notes Manager</h3>
+        <p>Organize your learnings and project notes in one secure place.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💡 Career Growth</h3>
+        <p>Bridge the gap between academics and real-world opportunities.</p>
+      </div>
+    </div>
+  </main>
 
   <footer>
     <section class="horizontal-ticker-container">
@@ -332,16 +276,10 @@
       </div>
     </section>
     <br>
-    <p><b>"Empower your future with hands-on experience! Join our internship program to gain practical skills, build your professional network, and kick-start your career."</b></p>
+    <p><b>"Empower your future with hands-on experience! Gain practical skills, build your professional network, and kick-start your career."</b></p>
     <p><a href="mailto:NextStep_internship@gmail.com">NextStep_internship@gmail.com</a></p>
     <h2>NextStep</h2>
-    <p class="menu"> 
-      <a href="index.html">Home</a>  
-      <!-- <a href="update.html">Live</a> | 
-      <a href="internship.html">Internships</a> | 
-      <a href="Help.html">Help</a> |  -->
-      <!-- <a href="cources.html">Courses</a> -->
-    </p>
+    <p><a href="index.html">Home</a> | <a href="login.html">Login</a></p>
     <p>NextStep &copy; 2025</p>
     <p>Developed by Isha Jain</p>
   </footer>
